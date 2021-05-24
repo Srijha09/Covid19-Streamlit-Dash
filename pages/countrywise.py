@@ -105,6 +105,6 @@ def main():
         fig = timeline(df,feature,country=country)
         st.plotly_chart(fig)
 
-    
+ 
     
      
