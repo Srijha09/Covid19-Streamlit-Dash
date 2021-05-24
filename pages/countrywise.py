@@ -8,7 +8,7 @@ import datetime
 
 
 #loading the data
-DATA_URL = (r'C:\Users\Srijhak\Documents\Covid19-dash\pages\covid.csv')
+DATA_URL = (r'covid.csv')
 @st.cache(allow_output_mutation=True)
 
 
