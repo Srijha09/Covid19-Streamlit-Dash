@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import streamlit as st
 import altair as alt
@@ -6,23 +7,15 @@ import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 import datetime
 
-
-
-
-#loading the data
-DATA_URL = (r'covid.csv')
-@st.cache(allow_output_mutation=True)
-
-
 def load_data():
     """ Function to load data
         param DATA_URL: data_url
         return: pandas dataframe
     """
+    DATA_URL = r'C:\Users\Srijhak\Documents\Covid19-dash\data\covid.csv'
     data = pd.read_csv(DATA_URL)
     data['Date'] = pd.to_datetime(data['Date']).dt.strftime('%Y-%m-%d')
     return data
-
 
 @st.cache
 def plot_snapshot_numbers(df, colors, country=None):
@@ -136,6 +129,23 @@ def main():
 
     #worldmap visualization of covid cases
     if (graph_type=="Map"):
+
+        #total number of cases indicator
+        fig = go.Figure()
+        fig.add_trace(go.Indicator(mode="number",value=int(df['Confirmed'].sum()),number={"valueformat":"0.f","font":{"size":28}},
+             title={"text":"Total_Confirmed","font":{"size":25}},domain={"row":0,"column":0}))
+
+        fig.add_trace(go.Indicator(mode="number",value=int(df['Deaths'].sum()),number={"valueformat":"0.f","font":{"size":28}},
+             title={"text":"Total_Deaths","font":{"size":25}},domain={"row":0,"column":1}))
+
+        fig.add_trace(go.Indicator(mode="number",value=int(df['Recovered'].sum()),number={"valueformat":"0.f","font":{"size":28}},
+             title={"text":"Total_Recovered","font":{"size":25}},domain={"row":1,"column":0}))
+
+        fig.add_trace(go.Indicator(mode="number",value=int(df['Active'].sum()),number={"valueformat":"0.f","font":{"size":28}},
+             title={"text":"Total_Active_Case","font":{"size":25}},domain={"row":1,"column":1}))
+
+        fig.update_layout(grid={"rows":2,"columns":2})
+        st.plotly_chart(fig)
        
         fig = px.choropleth(df,                        # Input Dataframe
                      locations="iso_code",           # identify country code column
@@ -198,7 +208,8 @@ def main():
         st.altair_chart(fig)
 
 
-
+if __name__=='__main__':
+    main()
 
 
 
