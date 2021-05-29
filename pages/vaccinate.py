@@ -14,7 +14,7 @@ def load_vaccine_data():
         param DATA_URL: data_url
         return: pandas dataframe
     """
-    DATA_URL = r'C:\Users\Srijhak\Documents\Covid19-dash\data\df_vaccine.csv'
+    DATA_URL = 'data/df_vaccine.csv'
     data = pd.read_csv(DATA_URL)
     data['date'] = pd.to_datetime(data['date']).dt.strftime('%Y-%m-%d')
     return data
@@ -24,7 +24,7 @@ def load_daily_data():
         param DATA_URL: data_url
         return: pandas dataframe
     """
-    DATA_URL = r'C:\Users\Srijhak\Documents\Covid19-dash\data\df_daily.csv'
+    DATA_URL = 'data/df_daily.csv'
     data = pd.read_csv(DATA_URL)
     data['date'] = pd.to_datetime(data['date']).dt.strftime('%Y-%m-%d')
     return data
@@ -34,7 +34,7 @@ def load_summary_data():
         param DATA_URL: data_url
         return: pandas dataframe
     """
-    DATA_URL = r'C:\Users\Srijhak\Documents\Covid19-dash\data\summary_df.csv'
+    DATA_URL = 'data/summary_df.csv'
     data = pd.read_csv(DATA_URL)
     return data
 
