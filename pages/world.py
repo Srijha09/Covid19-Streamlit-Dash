@@ -122,6 +122,7 @@ def plot_top_countries(df, colors):
 def main():
     st.title("Worldwide Visualization of the Covid-19 Cases")
     df = load_data()
+    st.write("The dataset was taken from [John Hopkins Covid19 data](https://github.com/CSSEGISandData/COVID-19)")
 
     graph_type = st.sidebar.selectbox("Choose a type of visualization", ["Map",
                                                         "Total Count",

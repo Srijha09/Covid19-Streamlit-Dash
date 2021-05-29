@@ -2,11 +2,13 @@ import streamlit as st
 import pages.home
 import pages.world
 import pages.countrywise
+import pages.vaccinate
 
 PAGES = {
     "Home": pages.home ,
     "Worldwide" : pages.world,
-    "Countrywise": pages.countrywise
+    "Countrywise": pages.countrywise,
+    "Vaccination Analysis": pages.vaccinate
 }
 
 def main():

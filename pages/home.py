@@ -2,12 +2,12 @@ import streamlit as st
 from PIL import Image
 
 def main():
-    image = Image.open("assets/world.jfif")
+    image = Image.open("assets/world.png")
     st.image(image)
     st.title("Welcome to the COVID-19 Dashboard")
     st.write("""
     This dashboard will be able to analyze, visualize, the spread of the novel Coronavirus - 2019 (COVID - 19)
-    caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2).
+    caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). Additionally, it provides an analysis of the vaccinations that have started rolling out by the end of 2020.
     """)
     st.markdown("## Symptoms")
     st.markdown(("* Fever or chills\n* Cough\n"
