@@ -74,7 +74,7 @@ def bar_plot(df,xcol, ycol,title,color, n=None):
         
 def main():
     st.title("Covid 19 Vaccination Analysis")
-    image = Image.open("assets/vacc.png")
+    image = Image.open("assets/vacc.PNG")
     st.image(image)
     st.write("The vaccinations had started rolling out during the end of 2020. The dataset starts from the beginning of January 2021. The vaccination dataset has been taken from [Our World in Data](https://github.com/owid/covid-19-data/tree/master/public) and the world cases summary data has been scraped from [Worldometer.info](https://www.worldometers.info/coronavirus/about/). This dashboard provides a holistic view of the vaccination administered in various parts of the world. This analysis will be able to provide us insights of Covid 19 Vaccine.")
     graph_type = st.selectbox("Choose visualization", ["Worldwide",
