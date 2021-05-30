@@ -12,7 +12,7 @@ def load_data():
         param DATA_URL: data_url
         return: pandas dataframe
     """
-    DATA_URL = r'C:\Users\Srijhak\Documents\Covid19-dash\data\covid.csv'
+    DATA_URL = 'data/covid.csv'
     data = pd.read_csv(DATA_URL)
     data['Date'] = pd.to_datetime(data['Date']).dt.strftime('%Y-%m-%d')
     return data
