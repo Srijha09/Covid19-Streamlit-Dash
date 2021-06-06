@@ -1,6 +1,6 @@
 # Covid19-Streamlit-Dash
 
-This Covid19 Dashboard provides are holistic analysis of the cases of the virus arounf the world and countrywise. It also provides a vaccination analysis administered worldwide.
+This Covid19 Dashboard provides are holistic analysis of the cases of the virus around the world and countrywise. It also provides a vaccination analysis administered worldwide.
 
 ## How to run
 Clone the repository and install dependencies:
