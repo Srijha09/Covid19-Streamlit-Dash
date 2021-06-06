@@ -3,12 +3,15 @@ import pages.home
 import pages.world
 import pages.countrywise
 import pages.vaccinate
+import pages.cases_forecast
+
 
 PAGES = {
     "Home": pages.home ,
     "Worldwide" : pages.world,
     "Countrywise": pages.countrywise,
-    "Vaccination Analysis": pages.vaccinate
+    "Covid 19 Forecast": pages.cases_forecast,
+    "Vaccination Analysis": pages.vaccinate,
 }
 
 def main():

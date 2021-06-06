@@ -39,6 +39,6 @@ def fetchdata():
     #tabulating the active cases
     df_all['Active'] = df_all['Confirmed'] - df_all['Deaths'] - df_all['Recovered']
 
-    df_all.to_csv(r'C:\Users\Srijhak\Documents\Covid19-dash\data\covid.csv')
+    df_all.to_csv(r'C:\Users\Srijhak\Documents\Covid19-Streamlit-Dash\data\covid.csv')
 
 fetchdata()

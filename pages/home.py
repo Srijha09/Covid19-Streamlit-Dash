@@ -6,7 +6,7 @@ def main():
     st.image(image)
     st.title("Welcome to the COVID-19 Dashboard")
     st.write("""
-    This dashboard will be able to analyze, visualize, the spread of the novel Coronavirus - 2019 (COVID - 19)
+    This dashboard will be able to analyze, visualize, and forecast the spread of the novel Coronavirus - 2019 (COVID - 19)
     caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). Additionally, it provides an analysis of the vaccinations that have started rolling out by the end of 2020.
     """)
     st.markdown("## Symptoms")
