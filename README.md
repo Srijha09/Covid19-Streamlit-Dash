@@ -13,6 +13,9 @@ The following tasks have been done to create this application
 
 ## How to run
 Clone the repository and install dependencies:
+```
+git clone https://github.com/Srijha09/Covid19-Streamlit-Dash.git
+```
 
 ```shell script
 pip3 install -r requirements.txt
