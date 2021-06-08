@@ -4,5 +4,6 @@ streamlit==0.82.0
 pydeck==0.3.1
 numpy==1.19.5
 plotly==4.14.3
+pystan==2.19.1.1
 fbprophet==0.7.1
 scikit-learn==0.24.2
